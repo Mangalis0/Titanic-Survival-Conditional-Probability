@@ -1,4 +1,4 @@
-# Titanic-Survival-Conditional-Probabily
+# Titanic-Survival-Conditional-Probability
 
 **Completed by Mangaliso Makhoba.**
 
