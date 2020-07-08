@@ -14,6 +14,7 @@
 
 1. Statistical Modeling
 2. Imputation of Missing values
+3. Probability
 
 ## Tools Used
 1. Scikit-learn
