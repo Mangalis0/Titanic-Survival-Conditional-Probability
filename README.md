@@ -45,7 +45,7 @@ The structure of this notebook is as follows:
 
 
 # Function 1: Missing Values
-Write a function that determines the number of missing entries for a specified column in the dataset. The function should return an `int` that corresponds to the number of missing entries in the specified column.
+A function that determines the number of missing entries for a specified column in the dataset. The function should return an `int` that corresponds to the number of missing entries in the specified column.
 
 _**Function Specifications:**_
 * Should take a pandas `DataFrame` and a `column_name` as input and return a `int` as output.
@@ -63,13 +63,14 @@ total_missing(df,'Survived') == 0
 
 # Function 2: Imputation
 
-We ultimately want to predict the survival chances of the passengers in the testing set. We can start by building a simple model using the data we already have by using _conditional probability_ ! Write a function that returns the survival probability of a passenger, given a condition on a **numerical variable** from the dataset. The condition will consist of a `column_name`, a `value` and a `boolean_operator`. Possible boolean operators include `"<"`,`">"`, or `"=="`. For example, `column_name = "Age"`, `boolean_operator = ">"`, and `value = 40` together form the condition `Age > 40`.
+Write a function that takes in as input a dataframe and a column name, and returns the `mean` for numerical columns and the `mode` for non-numerical columns.
 
-_**Function specifications:**_
-* The function should make use of the `df_clean` `DataFrame` loaded earlier in this notebook.
-* It should take a numerical `column_name` string, a `boolean_operator` string, and a `value` of type string as input. 
-* It should return a survival likelihood as a number between 0 and 1, rounded to 2 decimal places. 
-* Assume that `column_name` exists in `df_clean`.
+_**Function Specifications:**_
+* The function should take two inputs: `(df, column_name)`, where `df` is a pandas `DataFrame`, `column_name` is a `str`.
+* If the `column_name` does not exist in `df`, raise a `ValueError`.
+* Should return as output the `mean` if the specified column is numerical and return a list of the `mode(s)` otherwise.
+* The mean should be rounded to 2 decimal places.
+* **If there is more than one `mode` for a given non-numerical column, the fuction should return a list of all modes**.
 
 _**Expected Outputs:**_
 ```python
