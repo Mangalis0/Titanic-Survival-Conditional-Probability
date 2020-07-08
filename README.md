@@ -1,4 +1,4 @@
-# Hyperparameter Tuning
+# Titanic-Survival-Conditional-Probabily
 
 **Completed by Mangaliso Makhoba.**
 
